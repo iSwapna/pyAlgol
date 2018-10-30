@@ -17,6 +17,7 @@ For P(n + 1) : case 1(a): n + 1 th character belongs to A, ie. IL(n + 1) = A(i +
        |             |      |                         |      |          |
        ------------------------------------------------------------------
                             |<------ IL suffix for case 1 (a)----->|
+                            
         All the characters in the IL suffix until a[i + 1] belongs to B. 
         Let A[i + 1]be the character, ch. Let a single character( B[k] )in the IL suffix B[l] to B[j - 1] match A[i + 1]
         The greedy choice for A[i + 1] will pick B[k] and remove it from IL.
