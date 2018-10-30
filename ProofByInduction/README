@@ -20,4 +20,4 @@ i contains all characters of b. From b, any character b[index] should be added e
 Order of all characters in individual strings (a and b) is preserved.
 
 An attempt to write an O(len(i)) linear solution and then disprove it using the method of inductive proof. 
-My attempt was to prove it wright, but the proof lead me to the truth!
+My attempt was to prove it right, but the proof lead me to the truth!
