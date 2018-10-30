@@ -13,13 +13,14 @@ For P(n + 1) : case 1(a): n + 1 th character belongs to A, ie. IL(n + 1) = A(i +
        A(i + 1) will come anywhere in the IL suffix, after the position of a[i] in IL
        ------------------------------------------------------------------
        |             |      |                         |      |          |
-       |             | a[i] |  B[l] . ..B[k]. .B[j-1] | b[j] | a[i + 1] |
+       |             | a[i] |  b[l] . ..b[k]. .b[j-1] | b[j] | a[i + 1] |
        |             |      |                         |      |          |
        ------------------------------------------------------------------
                             |<------ IL suffix for case 1 (a)----->|
                             
         All the characters in the IL suffix until a[i + 1] belongs to B. 
-        Let A[i + 1]be the character, ch. Let a single character( B[k] )in the IL suffix B[l] to B[j - 1] match A[i + 1]
-        The greedy choice for A[i + 1] will pick B[k] and remove it from IL.
+        Let a[i + 1]be the character, ch. Let a single character( b[k] )in the IL suffix b[l] to b[j - 1] match a[i + 1]
+        The greedy choice for a[i + 1] will pick b[k] and remove it from IL.
         Now the remaining string B will have a single inversion, [b[1]...b[k - 1]b[k+1]...b[j]b[k]].
         Thus the greedy predicate, P(n) does not imply P(n + 1) and P(n) is not valid for all interleaves of length n >= 0
+        This predicate is wrong.
