@@ -25,7 +25,6 @@ def find_shortest_path(grid):
     # 1. distance grid - distance from start to this cell, for this route
     #                  - this route is characterised by a unique set of keys
     # 2. parent grid - parent from which this state was reached in the distance grid
-    # 3. Visited grid
     MAX_KEYS  = 10
     MAX_MASK, MAX_ROW, MAX_COL = 1 << MAX_KEYS, len(grid), len(grid[0])
     INF = MAX_ROW * MAX_COL * MAX_MASK + 1 
