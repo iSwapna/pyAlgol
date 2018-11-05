@@ -48,7 +48,7 @@ def find_shortest_path(grid):
     
     # ALGORITHM
     # scan grid and find start and goal cells
-    # do bfs (dfs should work too)
+    # do bfs
     #         - every move creates a new potential path to the goal which could be the shortest (brute force -backtrack)
     #         - adding a ground/gate/water node does not change the current path in any way- a normal bfs move
     #         - adding a new key, adds new possible future paths where a corresponding Gate could be crossed.
