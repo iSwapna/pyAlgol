@@ -25,7 +25,6 @@ def find_shortest_path(grid):
     # 1. distance grid - distance from start to this cell, for this route
     #                  - this route is characterised by a unique set of keys
     # 2. parent grid - parent from which this state was reached in the distance grid
-    # 3. Visited grid
     MAX_KEYS  = 10
     MAX_MASK, MAX_ROW, MAX_COL = 1 << MAX_KEYS, len(grid), len(grid[0])
     INF = MAX_ROW * MAX_COL * MAX_MASK + 1 
@@ -49,7 +48,7 @@ def find_shortest_path(grid):
     
     # ALGORITHM
     # scan grid and find start and goal cells
-    # do bfs (dfs should work too)
+    # do bfs
     #         - every move creates a new potential path to the goal which could be the shortest (brute force -backtrack)
     #         - adding a ground/gate/water node does not change the current path in any way- a normal bfs move
     #         - adding a new key, adds new possible future paths where a corresponding Gate could be crossed.

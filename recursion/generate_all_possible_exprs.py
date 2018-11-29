@@ -1,7 +1,4 @@
 
-
-#Incorrect code - '""' is right associative, best to handle seperately#
-
 def evaluate(val_1, val_2, optr):
     if optr == '""':
         return int(str(val_1) + str(val_2))

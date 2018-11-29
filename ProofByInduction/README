@@ -1,0 +1,23 @@
+Strings Interleave 
+
+* Wrong linear solution and (counter) Proof By Induction.
+
+
+
+
+
+Problem Statement:
+
+You're given three strings a, b and i. Write a function that checks whether i is an interleaving of a and b.
+
+
+
+String i is said to be interleaving string a and b, if:
+len(i) = len(a) + len(b).
+i only contains characters present in a or b.
+i contains all characters of a. From a, any character a[index] should be added exactly once in i.
+i contains all characters of b. From b, any character b[index] should be added exactly once in i.
+Order of all characters in individual strings (a and b) is preserved.
+
+An attempt to write an O(len(i)) linear solution and then disprove it using the method of inductive proof. 
+My attempt was to prove it right, but the proof lead me to the truth!

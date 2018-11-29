@@ -1,0 +1,26 @@
+Proof (counter!) by induction:
+
+Let A and B be 2 strings of length i and j respectively and IL a valid interleaving of A and B.
+Let A := [a[1]a[2]a[3]...a[i]] and B := [b[1]b[2]...b[j]]
+
+Let P(n) be the predicate : For an IL of length n, removing greedily string A from IL, transforms IL to B
+
+P(0) is true, since IL, A and B are of length 0
+
+Assume, P(n) is true.
+
+For P(n + 1) : case 1(a): n + 1 th character belongs to A, ie. IL(n + 1) = A(i + 1), and B[j] comes after A[i] in IL
+       A(i + 1) will come anywhere in the IL suffix, after the position of a[i] in IL
+       ------------------------------------------------------------------
+       |             |      |                         |      |          |
+       |             | a[i] |  b[l] . ..b[k]. .b[j-1] | b[j] | a[i + 1] |
+       |             |      |                         |      |          |
+       ------------------------------------------------------------------
+                            |<------ IL suffix for case 1 (a)----->|
+                            
+        All the characters in the IL suffix until a[i + 1] belongs to B. 
+        Let a[i + 1]be the character, ch. Let a single character( b[k] )in the IL suffix b[l] to b[j - 1] match a[i + 1]
+        The greedy choice for a[i + 1] will pick b[k] and remove it from IL.
+        Now the remaining string B will have a single inversion, [b[1]...b[k - 1]b[k+1]...b[j]b[k]].
+        Thus the greedy predicate, P(n) does not imply P(n + 1) and P(n) is not valid for all interleaves of length n >= 0
+        This predicate is wrong.
