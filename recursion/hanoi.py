@@ -1,4 +1,4 @@
-def steps_in_tower_of_hanoi(num_disks):
+def steps_hanoi(num_disks):
     #
     # Write your code here.
     #
@@ -18,3 +18,4 @@ def steps_in_tower_of_hanoi(num_disks):
     
     # initiate call from src A to dst C with tmp B
     move(num_disks, A, C, B)
+steps_hanoi(3)
