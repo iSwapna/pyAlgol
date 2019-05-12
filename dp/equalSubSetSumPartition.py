@@ -1,4 +1,4 @@
-rom collections import defaultdict
+from collections import defaultdict
 def equalSubSetSumPartition(arr):
     # Write your code here
     n = len(arr)
