@@ -1,4 +1,4 @@
-from collections import defaultdict
+rom collections import defaultdict
 def equalSubSetSumPartition(arr):
     # Write your code here
     n = len(arr)
@@ -32,27 +32,26 @@ def equalSubSetSumPartition(arr):
                 
     req = sum/2
     idx = n-1
-
-if not dp[idx][req]:
-##        return []
+    if not dp[idx][req]:
+        return []
         
-##    res = [False for _ in range(n)]
-##    cnt = 0
-##    while idx >= 0:
-##        if idx != 0:
-##            if dp[idx][req] and not dp[idx-1][req]:
-##                res[idx] = 1
-##                cnt += 1
-##                req -= arr[idx]
-##                if not req:
-##                    break
-##        else:
-##            res[idx] = 1
-##            cnt += 1
-##        idx -= 1
-##    #special case when arr is [-3,3]
-##    if cnt == n:
-##        return []
-##    else:
-##        return res
+    res = [False for _ in range(n)]
+    cnt = 0
+    while idx >= 0:
+        if idx != 0:
+            if dp[idx][req] and not dp[idx-1][req]:
+                res[idx] = 1
+                cnt += 1
+                req -= arr[idx]
+                if not req:
+                    break
+        else:
+            res[idx] = 1
+            cnt += 1
+        idx -= 1
+    #special case when arr is [-3,3]
+    if cnt == n:
+        return []
+    else:
+        return res
 
